@@ -1,0 +1,197 @@
+# Vietnamese Braille reference data
+# Source: translate/data/*.json
+# Format: name -> dots -> unicode
+# A hyphen in dots separates multiple Braille cells in one symbol.
+# The blank Braille cell U+2800 is the word-space: "⠀".
+#
+# Labelme/YOLO note:
+# annotate image objects as braille_dot or braille_cell;
+# use this file to map reconstructed dots to Unicode;
+# grammar and syntax rules are not image-detection classes.
+
+[alphabet.letters]
+a -> 1 -> ⠁
+ă -> 345 -> ⠜
+â -> 16 -> ⠡
+b -> 12 -> ⠃
+c -> 14 -> ⠉
+d -> 145 -> ⠙
+đ -> 2346 -> ⠮
+e -> 15 -> ⠑
+ê -> 126 -> ⠣
+f -> 124 -> ⠋
+g -> 1245 -> ⠛
+h -> 125 -> ⠓
+i -> 24 -> ⠊
+j -> 245 -> ⠚
+k -> 13 -> ⠅
+l -> 123 -> ⠇
+m -> 134 -> ⠍
+n -> 1345 -> ⠝
+o -> 135 -> ⠕
+ô -> 1456 -> ⠹
+ơ -> 246 -> ⠪
+p -> 1234 -> ⠏
+q -> 12345 -> ⠟
+r -> 1235 -> ⠗
+s -> 234 -> ⠎
+t -> 2345 -> ⠞
+u -> 136 -> ⠥
+ư -> 1256 -> ⠳
+v -> 1236 -> ⠧
+w -> 2456 -> ⠺
+x -> 1346 -> ⠭
+y -> 13456 -> ⠽
+z -> 1356 -> ⠵
+
+[tones]
+ngang ->  -> no tone cell
+acute_accent (sắc) -> 35 -> ⠔
+grave_accent (huyền) -> 56 -> ⠰
+hook_above (hỏi) -> 26 -> ⠢
+tidle (ngã) -> 36 -> ⠤
+dot_below (nặng) -> 6 -> ⠠
+
+[numbers.indicator]
+number -> 3456 -> ⠼
+
+[numbers.digits]
+0 -> 245 -> ⠚
+1 -> 1 -> ⠁
+2 -> 12 -> ⠃
+3 -> 14 -> ⠉
+4 -> 145 -> ⠙
+5 -> 15 -> ⠑
+6 -> 124 -> ⠋
+7 -> 1245 -> ⠛
+8 -> 125 -> ⠓
+9 -> 24 -> ⠊
+
+[numbers.symbols]
+decimal_separator (,) ->  -> ⠂
+thousands_separator (.) ->  -> ⠲
+fraction_slash (/) ->  -> ⠌
+minus (-) ->  -> ⠤
+plus (+) ->  -> ⠬
+percent (%) ->  -> ⠨⠴
+multiplication -> phép nhân
+division -> phép chia
+
+[punctuation]
+comma (,) -> 2 -> ⠂
+semicolon (;) -> 23 -> ⠆
+colon (:) -> 25 -> ⠒
+period (.) -> 256 -> ⠲
+question_mark (?) -> 26 -> ⠢
+exclamation_mark (!) -> 235 -> ⠖
+hyphen (-) -> 36 -> ⠤
+ellipsis (...) -> 3-3-3 -> ⠄⠄⠄
+slash (/) -> 34 -> ⠌
+backslash (\\) -> 4-16 -> ⠈⠡
+asterisk (*) -> 236 -> ⠦
+at_sign (@) -> 4 -> ⠈
+ampersand (&) -> 12346 -> ⠯
+quotation_mark.open -> 236 -> ⠦""
+quotation_mark.close -> 356 -> ⠴
+left_parenthesis -> 4-126 -> ⠈⠣
+right_parenthesis -> 4-345 -> ⠈⠜
+left_square_bracket -> 46-126 -> ⠨⠣
+right_square_bracket -> 46-345 -> ⠨⠜
+left_brace -> 456-126 -> ⠸⠣
+right_brace -> 456-345 -> ⠸⠜
+
+[indicators]
+capital -> 46 -> ⠨
+capital_word -> 456 -> ⠸
+capital_phrase -> 25-46 -> ⠒⠨
+capital_passage -> 46-46 -> ⠨⠨
+capital_end -> 46-13 -> ⠨⠅
+letter -> 6 -> ⠠
+quotation -> 46-126-46-345 -> ⠨⠣⠨⠜
+note_start -> 25-23 -> ⠒⠆
+note_end -> 23-25 -> ⠆⠒
+special_font -> 456 -> ⠸
+bold_start -> 45 -> ⠘
+bold_end -> 45 -> ⠘
+italic_start -> 5 -> ⠐
+italic_end -> 5 -> ⠐
+underline_letter -> 46-2 -> ⠨⠂
+underline_word -> 456-2356 -> ⠸⠶
+underline_end -> 456-3 -> ⠸⠄
+bold_italic_underline -> 46-34 -> ⠨⠌
+format_end -> 156 -> ⠱
+center -> 25-12 -> ⠒⠃
+abbreviation_word -> 6 -> ⠠
+abbreviation_phrase -> 6-6 -> ⠠⠠
+foreign -> 4 -> ⠈
+greek -> 56 -> ⠰
+greek_capital -> 456 -> ⠸
+default -> 2356-3-3-3-2356 -> ⠶⠄⠄⠄⠶
+poetry_start -> 345 -> ⠜
+poetry_line_end -> 345 -> ⠜
+poetry_paragraph_end -> 345-345 -> ⠜⠜
+poetry_end -> 156 -> ⠱
+
+[contractions]
+initial_ch -> c,h -> sequence ⠉⠓
+initial_gh -> g,h -> sequence ⠛⠓
+initial_gi -> g,i -> sequence ⠛⠊; special rule gi
+initial_kh -> k,h -> sequence ⠅⠓
+initial_ng -> n,g -> sequence ⠝⠛
+initial_ngh -> n,g,h -> sequence ⠝⠛⠓
+initial_nh -> n,h -> sequence ⠝⠓
+initial_ph -> p,h -> sequence ⠏⠓
+initial_qu -> q,u -> sequence ⠟⠥; special rule qu
+initial_th -> t,h -> sequence ⠞⠓
+initial_tr -> t,r -> sequence ⠞⠗
+final_ch -> c,h -> sequence ⠉⠓
+final_ng -> n,g -> sequence ⠝⠛
+final_nh -> n,h -> sequence ⠝⠓
+special_qu -> remove u after q
+special_gi -> remove repeated i when main vowel starts with i
+
+[grammar]
+alphabet.vowels -> a,ă,â,e,ê,i,o,ô,ơ,u,ư,y
+alphabet.consonants -> b,c,d,đ,g,h,k,l,m,n,p,q,r,s,t,v,x
+initials -> empty,b,c,ch,d,đ,g,gh,gi,h,k,kh,l,m,n,ng,ngh,nh,p,ph,q,qu,r,s,t,th,tr,v,x
+medials -> empty,o,u
+finals -> empty,c,ch,m,n,ng,nh,p,t
+tones -> ngang,sắc,huyền,hỏi,ngã,nặng
+syllable_order -> initial,medial,vowel,final,tone
+special.qu -> ignore_u=true
+special.gi -> ignore_i=true
+
+[rules]
+parser.ignore_case -> false
+parser.normalize_unicode -> true
+parser.split_syllables -> true
+parser.split_words -> true
+parser.trim_spaces -> true
+tone.default_position -> before_vowel
+tone.normal -> initial,tone,medial,vowel,final
+tone.qu -> q,tone,vowel,final
+tone.gi -> g,tone,vowel,final
+capital.single_letter -> capital.letter
+capital.single_word -> capital.word
+capital.phrase -> capital.phrase
+capital.passage -> capital.passage + capital.terminator
+number.indicator -> number
+number.repeat_indicator -> false
+number.reset_after -> space,letter,punctuation
+foreign.indicator -> foreign
+foreign.scope -> word
+abbreviation.word_indicator -> abbreviation.word
+abbreviation.phrase_indicator -> abbreviation.phrase
+quotation.indicator -> quotation
+translation_order -> capital,number,foreign,abbreviation,tone,alphabet,punctuation
+
+[spacing]
+blank_cell -> 0 -> ⠀
+blank_cell_meaning -> khoảng phím cách giữa các từ
+preserve_blank_cell -> true
+
+[labelme_yolo_guidance]
+class_0 -> braille_dot -> one raised dot bounding box
+class_1 -> braille_cell -> optional cell bounding box
+class_2 -> braille_line -> optional text-line bounding box
+note -> data.txt is a Braille pattern reference; grammar rules are not image classes
